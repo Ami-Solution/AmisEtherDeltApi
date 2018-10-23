@@ -48,10 +48,10 @@
 
 ## Git
 
- * `cd ~ && git clone --recursive https://github.com/etherdelta/public_api.git`
- * `cd ~/public_api && npm install`
- * `cd ~/public_api/etherdelta.github.io && npm install`
- * `cd ~/public_api/etherdelta.github.io/common && npm install`
+ * `cd ~ && git clone --recursive https://github.com/etherdelta/AmisEtherDeltApi.git`
+ * `cd ~/AmisEtherDeltApi && npm install`
+ * `cd ~/AmisEtherDeltApi/amis-delta-dax.glitch.me && npm install`
+ * `cd ~/AmisEtherDeltApi/amis-delta-dax.glitch.me/common && npm install`
  * To update: `sh pull.sh` and `npm install`
 
 ## Start

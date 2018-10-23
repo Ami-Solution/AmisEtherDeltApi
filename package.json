@@ -9,22 +9,24 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "cd amis-delta-dax.glitch.me && npm install && cd common && npm install"
+    "postinstall": "cd amis-delta-dax.glitch.me && pnpm install && cd common && pnpm install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ami-solution/AmisEtherDeltApi.git"
   },
   "dependencies": {
+    
     "async": "^2.1.2",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "express": "4.10.2",
     "express-session": "^1.14.1",
     "request": "^2.81.0",
+    "bignumber.js": "7.2.1",
+    "js-sha256": "^0.9.0",
     "sha256": "^0.2.0",
-    "bignumber": "7.2.1",
-    "web3": "1.0.0-beta.34"
+    "web3": "1.0.0-beta.36"
   },
   "devDependencies": {
     "eslint": "^3.18.0",
