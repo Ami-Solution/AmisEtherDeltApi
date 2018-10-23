@@ -1,4 +1,10 @@
-# Cache
+# AmisEtherDeltApi
+
+## What is AmisEtherDeltApi ?
+
+AmisEtherDeltApi is an experimental project which consist of building an API for Amis Ether Delta. 
+
+# Cache server 
 
 ## Installation
 
@@ -28,7 +34,7 @@
 
  * `pm2 list`, `pm2 log`
 
-# API-main
+# API-main server
 
 ## Installation
 
@@ -48,7 +54,7 @@
 
 ## Git
 
- * `cd ~ && git clone --recursive https://github.com/etherdelta/AmisEtherDeltApi.git`
+ * `cd ~ && git clone --recursive https://github.com/ami-solution/AmisEtherDeltApi.git`
  * `cd ~/AmisEtherDeltApi && npm install`
  * `cd ~/AmisEtherDeltApi/amis-delta-dax.glitch.me && npm install`
  * `cd ~/AmisEtherDeltApi/amis-delta-dax.glitch.me/common && npm install`
@@ -62,3 +68,5 @@
 ## Monitor
 
  * `pm2 list`, `pm2 log`
+ 
+# * Project maintained by ["Ami-Solution"](https://github.com/ami-solution)
