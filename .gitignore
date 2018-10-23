@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+.node*
+storage_deadOrdersCache
+storage_eventsCache
+storage_gitterMessagesCache
+storage_ordersCache
+storage_messagesCache
+report*
+provider

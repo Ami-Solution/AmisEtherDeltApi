@@ -1,0 +1,34 @@
+{
+  "name": "AmisEtherDeltApi",
+  "description": "Amis Ether Delta Dex API",
+  "author": "Ami-Solution",
+  "license": "ISC",
+  "main": "server.js",
+  "bugs": {
+    "url": "https://github.com/ami-solution/AmisEtherDeltApi/issues"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "cd amis-delta-dax.glitch.me && npm install && cd common && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ami-solution/AmisEtherDeltApi.git"
+  },
+  "dependencies": {
+    "async": "^2.1.2",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "express": "4.10.2",
+    "express-session": "^1.14.1",
+    "request": "^2.81.0",
+    "sha256": "^0.2.0",
+    "bignumber": "7.2.1",
+    "web3": "1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
