@@ -16,7 +16,7 @@ jobs:
           - POSTGRES_USER: test
           - POSTGRES_DB: test
           - POSTGRES_PASSWORD: test
-      - image: Ami-Solution/0x-testrpc:latest
+ #    - image: ami-solution/0x-testrpc:latest
     steps:
       - checkout
       
