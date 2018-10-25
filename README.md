@@ -32,9 +32,10 @@ The High Level Architecture is depicted in below diagram:
 	                            ┌───────┘  └───────┐                     
 	                            │                  ▼                     
 	                     ┌─────────────┐    ┌─────────────┐              
-	                     │             │    │             │              
-	                     │     Cache   │    │  MAIN API   │              
-	                     │    server   │    │             │              
+	                     │             │    │      	      │
+			     │   MAIN API  │ 	│  CACHE API  │
+	                     │    SERVER   │    │   SERVER    │              
+	                     │  	   │    │             │              
 	                     └─────────────┘    └─────────────┘              
 	                            ▲                  ▲                     
 	                            │ emits            │                     
