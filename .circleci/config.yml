@@ -41,4 +41,4 @@ jobs:
           command: npm install -g pnpm
       - run:
           name: Test Packages
-          command: npm run build
+          command: npm run 
