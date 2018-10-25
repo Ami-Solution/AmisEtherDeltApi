@@ -45,5 +45,5 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: 
-          name: npm build
-command: npm build
+          name: cd ~/AmisEtherDeltApi && npm install
+command: cd ~/AmisEtherDeltApi && npm install
