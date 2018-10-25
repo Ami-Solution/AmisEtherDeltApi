@@ -18,6 +18,53 @@
 
 AmisEtherDeltApi is an experimental project which consist of building an API for Amis Ether Delta. 
 
+### HLA
+The High Level Architecture is depicted in below diagram:
+                                                                    
+	                                                                     
+	                                                                     
+	                       ┌─────────────────────────────┐                       
+	                       │   amis-delta-dax.glitch.me  │
+			                     │            Amis             │
+	                       │   	    Delta Dax	Client     │
+			                     │    	     Front-End    	     │                       
+	                       │              		             │                       
+	                       └─────────────────────────────┘                       
+	                                    ▲  ▲                             
+	                            ┌───────┘  └───────┐                     
+	                            │                  ▼                     
+	                     ┌─────────────┐    ┌─────────────┐              
+	                     │             │    │             │              
+	                     │     Cache   │    │  MAIN API   │              
+	                     │    server   │    │             │              
+	                     └─────────────┘    └─────────────┘              
+	                            ▲                  ▲                     
+	                            │ emits            │                     
+	                            └─events┐   ┌──────┘                     
+	                                    │   │                            
+	                                    │   ▼                            
+	    ┌──────────────────┐    ┌─────────────────┐       ┌──────────────┐
+	    │  Relevant EVM    │    │                 │       │◦◦◦◦◦◦◦◦◦◦◦◦◦◦│
+	    │   event streams  │────▶AmisEtherDeltApi │◀─────▶│◦◦◦◦◦◦◦◦◦◦◦◦◦◦│
+	    │                  │    │                 │       │◦◦◦◦◦◦◦◦◦◦◦◦◦◦│
+	    └──────────────────┘    └─────────────────┘       └──────────────┘
+	                                      ▲                              
+	                                      │                              
+	                                      ▼                              
+	                              ┌──────────────┐                       
+	                              │              │                       
+	                              │  Orderbook   │                       
+	                              │              │                       
+	                              └──────────────┘                       
+	                                      ▲                              
+	                                      │                              
+	                                      ▼                              
+	                              ┌──────────────┐                       
+	                              │              │                       
+	                              │  Data store  │                       
+	                              │              │                       
+	                              └──────────────┘                       
+
 # Cache server 
 
 ## Installation
