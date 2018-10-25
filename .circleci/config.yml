@@ -38,7 +38,7 @@ jobs:
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
       - run:
           name: npm Install 
-          command: npm install
+          command: npm install pnpm
       - run:
           name: Test Packages
-          command: npm run build
+          command: pnpm run build
