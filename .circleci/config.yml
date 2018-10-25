@@ -37,8 +37,8 @@ jobs:
           name: Change permissions from root to user
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
       - run:
-          name: npm Install 
-          command: npm install pnpm
+          name: npm Install -g pnpm
+          command: npm install -g pnpm
       - run:
           name: Test Packages
-          command: pnpm run build
+          command: npm run build
