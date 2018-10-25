@@ -1,25 +1,19 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
 version: 2
-
 jobs:
   build:
     docker:
-
-      - image: circleci/node:9.3
-        environment:
-          - PORT: 3000
-          - PGUSER: 'test'
-          - PGPASSWORD: 'test'
-          - PGDATABASE: 'test'
-          - PGHOST: 'localhost'
-          - PGPORT: '5432'
-    
-      - image: circleci/postgres:10.1
-        environment:
-          - POSTGRES_USER: test
-          - POSTGRES_DB: test
-          - POSTGRES_PASSWORD: test
-
-      - image: davidqhr/0x-testrpc:latest
+      # specify the version you desire here
+      - image: circleci/node:8.12
+      
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+    working_directory: ~/repo
 
     steps:
       - checkout
@@ -32,7 +26,6 @@ jobs:
             sudo mv node_modules/npm /usr/local/lib/node_modules/npm
             sudo chown -R 500:500 /usr/local/lib/node_modules/npm
        
-
       - run:
           name: "Checking Versions"
           command: |
@@ -41,23 +34,16 @@ jobs:
       - run:
           name: Change permissions from root to user
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+      - run:
+          name: npm install
+          command: npm install
 
-      - run:
-          name: Install Lerna
-          command: npm install --global lerna
-
-      - run:
-          name: Clear Cached Dependencies
-          command: lerna clean --yes
-          
-      - run:
-          name: Install Package Dependencies 
-          command: lerna bootstrap --stream
-
-      - run:
-          name: Build Packages
-          command: CI=false lerna run build --stream
-
-      - run:
-          name: Test Packages
-command: lerna run test
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: 
+          name: npm build
+command: npm build
