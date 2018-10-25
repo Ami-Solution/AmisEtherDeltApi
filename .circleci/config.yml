@@ -37,8 +37,8 @@ jobs:
           name: Change permissions from root to user
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
       - run:
-          name: Install Lerna
-          command: npm install --global lerna
+          name: npm Install 
+          command: npm install
       - run:
           name: Test Packages
-          command: npm install
+          command: npm run build
