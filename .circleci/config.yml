@@ -40,15 +40,5 @@ jobs:
           name: Install Lerna
           command: npm install --global lerna
       - run:
-          name: Clear Cached Dependencies
-          command: lerna clean --yes
-          
-      - run:
-          name: Install Package Dependencies 
-          command: lerna bootstrap --stream
-      - run:
-          name: Build Packages
-          command: CI=false lerna run build --stream
-      - run:
           name: Test Packages
           command: npm install
