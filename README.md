@@ -10,7 +10,7 @@
 &nbsp;[![ßtesting TokenStore](https://img.shields.io/badge/ßtesting-TokenStore-yellow.svg)](https://token.store/trade/0x949bed886c739f1a3273629b3320db0c5024c719)
 &nbsp;[![αtesting EthenMarket](https://img.shields.io/badge/αtesting-ethenmarket-lightgrey.svg)](https://ethen.market/949bed886c739f1a3273629b3320db0c5024c719)&nbsp;[![ßtesting AmisDex](https://img.shields.io/badge/ßtesting-amisdex-lightblue.svg)](https://amisdex.github.io/amis-exchange-www)
 
-[![CircleCI](https://circleci.com/gh/Ami-Solution/amisetherdeltapi.svg?style=svg)](https://circleci.com/gh/Ami-Solution/amisetherdeltapi/)
+[![CircleCI](https://circleci.com/gh/Ami-Solution/AmisEtherDeltApi.svg?style=svg)](https://circleci.com/gh/Ami-Solution/AmisEtherDeltApi/)
 
 # AmisEtherDeltApi
 
