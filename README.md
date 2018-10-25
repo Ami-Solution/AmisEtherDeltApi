@@ -20,15 +20,13 @@ AmisEtherDeltApi is an experimental project which consist of building an API for
 
 ### HLA
 The High Level Architecture is depicted in below diagram:
-                                                                    
-	                                                                     
-	                                                                     
+```                         
 	                       ┌─────────────────────────────┐                       
 	                       │   amis-delta-dax.glitch.me  │
-			                     │            Amis             │
-	                       │   	    Delta Dax	Client     │
-			                     │    	     Front-End    	     │                       
-	                       │              		             │                       
+			       │            Amis             │
+	                       │      Delta Dax	Client       │
+			       │    	  Front-End	     │                       
+	                       │              		     │                       
 	                       └─────────────────────────────┘                       
 	                                    ▲  ▲                             
 	                            ┌───────┘  └───────┐                     
@@ -64,7 +62,7 @@ The High Level Architecture is depicted in below diagram:
 	                              │  Data store  │                       
 	                              │              │                       
 	                              └──────────────┘                       
-
+```
 # Cache server 
 
 ## Installation
