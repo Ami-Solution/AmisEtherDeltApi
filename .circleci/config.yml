@@ -51,4 +51,4 @@ jobs:
           command: CI=false lerna run build --stream
       - run:
           name: Test Packages
-command: cd ~/AmisEtherDeltApi && npm install
+          command: npm install
