@@ -38,8 +38,8 @@ jobs:
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
           
       - run:
-          name: env; echo $
-          command: env; echo $
+          name: npm install -g pm2
+          command: npm install -g pm2
           
       - run:
           name: bash -c 'cd ~ && pm2 start cache.js'
