@@ -37,7 +37,7 @@ jobs:
           name: Change permissions from root to user
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
           
-                - run:
+      - run:
           name: env; echo $
           command: env; echo $
           
