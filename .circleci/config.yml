@@ -44,7 +44,8 @@ jobs:
       - run:
           name: bash -c 'cd ~ && pm2 start cache.js'
           command: bash -c '
-            cd ~; 
+            pwd;
+            cd app; 
             pm2 start cache.js'
        #    npm run build
        #    pm2 restart build/server'
