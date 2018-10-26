@@ -44,14 +44,11 @@ jobs:
       - run:
           name: bash -c 'cd ~ && pm2 start cache.js'
           command: bash -c '
-            cd ~ 
+            cd ~; 
             pm2 start cache.js'
        #    npm run build
        #    pm2 restart build/server'
 
-      - run:
-          name: npm install -g clevis
-          command: npm install -g clevis
           
      #- run:
      #    name: clevis init 
@@ -66,9 +63,9 @@ jobs:
      #    name: clevis compile .
 #    command: clevis compile .
 
-      - run:
-          name: npm Install -g pnpm
-          command: npm install -g pnpm
-      - run:
-          name: Test Packages
-          command: npm run 
+     #- run:
+     #    name: npm Install -g pnpm
+     #    command: npm install -g pnpm
+     #- run:
+     #    name: Test Packages
+     #    command: npm run 
